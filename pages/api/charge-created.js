@@ -11,5 +11,6 @@ export default async (req, res) => {
   const response = await instance.post(`charges/${req.body.charge.id}/change_next_charge_date`, {
     next_charge_date: '2021-07-01'
   })
-  return res.status(200).json(response)
+  console.log(response)
+  return res.status(200).json("Updated")
 }
