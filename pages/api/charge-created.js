@@ -9,8 +9,7 @@ export default async (req, res) => {
   console.log(req.body.charge)
   // const scheduledDate = new Date(req.body.charge.scheduled_at)
   const response = await instance.post(`charges/${req.body.charge.id}/change_next_charge_date`, {
-    next_charge_date: '2021-07-01'
+    next_charge_date: '2021-09-25'
   })
-  console.log(response)
   return res.status(200).json("Updated")
 }
